@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+                name="weather"
+                type="com.example.weatherforecast.data.WeatherInfo"></variable>
+        <variable
+                name="onClickListener"
+                type="android.view.View.OnClickListener"></variable>
+    </data>
+
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:onClick="@{onClickListener}"
+            android:layout_height="wrap_content"
+            app:contentPadding="@dimen/padding_4_dp"
+            android:layout_marginBottom="@dimen/padding_8_dp">
+        <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:padding="@dimen/padding_8_dp" android:columnCount="2">
+
+            <TextView
+                    android:id="@+id/date_time"
+                    style="@style/WeatherMainRowLable"
+                    android:text='@string/date_time'
+            />
+            <TextView
+                    android:id="@+id/humidity"
+                    style="@style/WeatherMainRowLable"
+                    android:text='@string/humidity'
+                    android:layout_marginBottom="@dimen/padding_4_dp"
+            />
+            <TextView
+                    android:id="@+id/date_time_tv"
+                    style="@style/WeatherMainRowValue"
+                    android:text="@{weather.dt_txt}"
+            />
+            <TextView
+                    android:id="@+id/humidity_tv"
+                    style="@style/WeatherMainRowValue"
+                    android:text='@{String.valueOf(weather.main.humidity)}'
+                    android:layout_marginBottom="@dimen/padding_4_dp"
+            />
+            <TextView
+                    android:id="@+id/temp"
+                    style="@style/WeatherMainRowLable"
+                    android:text='@string/temp'
+            />
+            <TextView
+                    android:id="@+id/rain"
+                    style="@style/WeatherMainRowLable"
+                    android:text="@string/weather"
+            />
+
+            <TextView
+                    android:id="@+id/temp_tv"
+                    style="@style/WeatherMainRowValue"
+                    android:text='@{String.valueOf(weather.main.temp)}'
+            />
+            <TextView
+                    android:id="@+id/rain_tv"
+                    style="@style/WeatherMainRowValue"
+                    android:text='@{String.valueOf(weather.weather.get(0).description)}'
+            />
+        </GridLayout>
+
+    </android.support.v7.widget.CardView>
+</layout>

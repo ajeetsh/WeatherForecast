@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">WeatherForecast</string>
+    <string name="weather_info">Weather Information :</string>
+    <string name="hyphen"> - </string>
+    <string name="humidity">Humidity</string>
+    <string name="date_time">Date Time(24 Hour)</string>
+    <string name="weather">Weather</string>
+    <string name="temp">Temp.(In Celsius)</string>
+    <string name="wind_speed">Wind Speed</string>
+    <string name="temp_min">Min. Temp.(In Celsius)</string>
+    <string name="temp_max">Max. Temp. (In Celsius)</string>
+    <string name="weather_detail">Weather Details</string>
+    <string name="city">City</string>
+    <string name="country">Country</string>
+</resources>
